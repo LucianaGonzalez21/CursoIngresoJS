@@ -18,7 +18,7 @@ function mostrarAumento()
 
 	sueldo = parseFloat(document.getElementById('txtIdSueldo').value);
 
-	aumento = sueldo * .1;
+	aumento = sueldo * 0.1;
 
 	resultado = sueldo + aumento;
 
