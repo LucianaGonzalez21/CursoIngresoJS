@@ -10,10 +10,48 @@ function mostrar()
 	estacion = document.getElementById('txtIdEstacion').value;
 	destino = document.getElementById('txtIdDestino').value;
 	
-	// calculo aumentos y descuentos
+	switch(destino) {
+		case 'Bariloche':
+			if (estacion == 'Invierno') {
+				precioFinal = PRECIO * 1.2;		
+			} else if ( estacion == 'Verano') {
+				precioFinal = PRECIO * .8;		
+			} else {
+				precioFinal = PRECIO * 1.1;		
+			}
+		break;
+		case 'Cataratas':
+			if (estacion == 'Invierno') {
+				precioFinal = PRECIO - PRECIO * .1;	
+			} else if ( estacion == 'Verano') {
+				precioFinal = PRECIO + PRECIO * .1;	
+			} else {
+				precioFinal = PRECIO + PRECIO * .1;	
+			}
+		break;
+		case 'Mar del plata':
+			if (estacion == 'Invierno') {
+				precioFinal = PRECIO - PRECIO * .2;	
+			} else if ( estacion == 'Verano') {
+				precioFinal = PRECIO + PRECIO * .2;	
+			} else {
+				precioFinal = PRECIO + PRECIO * .1;	
+			}
+		break;
+		case 'Cordoba':
+			if (estacion == 'Invierno') {
+				precioFinal = PRECIO - PRECIO * .1;	
+			} else if ( estacion == 'Verano') {
+				precioFinal = PRECIO + PRECIO * .1;	
+			} else {
+				precioFinal = PRECIO;
+			}
+		break;
+	}
 
+		alert(`El precio final es $${precioFinal}`);
 
-	switch(estacion) {
+	/* switch(estacion) {
 		case 'Invierno':
 			switch (destino) {
 				case 'Bariloche':
@@ -63,6 +101,8 @@ function mostrar()
 	precioFinal = PRECIO + aumento - descuento;
 
 	alert(`El precio a pagar es $${precioFinal}`);
+
+	*/
 
 
 	/* switch(estacion) {
